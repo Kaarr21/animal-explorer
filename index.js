@@ -1,13 +1,10 @@
-// DOM Elements
 const animalInput = document.getElementById('animalInput');
 const animalList = document.getElementById('animalList');
 const factDisplay = document.getElementById('factDisplay');
 const typeFilterButtons = document.querySelectorAll('.type-filter button');
 
-// Global variable to store fetched animal data
 let animalsData = [];
 
-// Fetch animals from JSON file
 async function fetchAnimals() {
     try {
         const response = await fetch('db.json');
@@ -20,7 +17,6 @@ async function fetchAnimals() {
     }
 }
 
-// Function to render animal list
 function renderAnimalList(filteredAnimals) {
     animalList.innerHTML = '';
     filteredAnimals.forEach(animal => {
@@ -32,24 +28,17 @@ function renderAnimalList(filteredAnimals) {
     });
 }
 
-// Function to display animal details
 function displayAnimalDetails(animal) {
-    // Clear previous content
     factDisplay.innerHTML = '';
-
-    // Create detailed animal information
     const detailsHTML = `
         <div class="animal-details">
             <h2>${animal.name}</h2>
-            
             ${animal.image ? `<img src="${animal.image}" alt="${animal.name}" class="animal-image">` : ''}
-            
             <div class="animal-info">
                 <h3>Interesting Facts:</h3>
                 <ul>
                     ${animal.facts.map(fact => `<li>${fact}</li>`).join('')}
                 </ul>
-                
                 <div class="animal-metadata">
                     <p><strong>Type:</strong> ${animal.type.charAt(0).toUpperCase() + animal.type.slice(1)}</p>
                     <p><strong>Animal ID:</strong> ${animal.id}</p>
@@ -58,11 +47,9 @@ function displayAnimalDetails(animal) {
         </div>
     `;
 
-    // Set the innerHTML of the fact display
     factDisplay.innerHTML = detailsHTML;
 }
 
-// Search functionality
 animalInput.addEventListener('input', () => {
     const searchTerm = animalInput.value.toLowerCase();
     const filteredAnimals = animalsData.filter(animal => 
@@ -71,10 +58,8 @@ animalInput.addEventListener('input', () => {
     renderAnimalList(filteredAnimals);
 });
 
-// Type filter functionality
 typeFilterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class from all buttons
         typeFilterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
@@ -89,5 +74,4 @@ typeFilterButtons.forEach(button => {
     });
 });
 
-// Initial fetch of animals when page loads
 fetchAnimals();
