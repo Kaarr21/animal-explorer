@@ -1,0 +1,74 @@
+{
+    "animals": [
+        {
+            "id": "1",
+            "name": "Lion",
+            "type": "Mammal",
+            "image": "https://shorturl.at/AwjZX",
+            "facts": ["King of the jungle", "Lives in prides", "Roars loudly"]
+        },
+        {
+            "id": "2",
+            "name": "Elephant",
+            "type": "Mammal",
+            "image": "",
+            "facts": ["Largest land animal", "Has a great memory", "Uses trunk to grab things"]
+        },
+        {
+            "id": "3",
+            "name": "Owl",
+            "type": "Bird",
+            "image": "",
+            "facts": ["Sees well at night", "Rotates head almost 360°", "Symbol of wisdom"]
+        },
+        {
+            "id": "4",
+            "name": "Dolphin",
+            "type": "Marine",
+            "image": "",
+            "facts": ["Very intelligent", "Communicates with clicks", "Can jump high"]
+        },
+        {
+            "id": "5",
+            "name": "Panda",
+            "type": "Mammal",
+            "image": "",
+            "facts": ["Eats mostly bamboo", "Loves to climb trees", "Native to China"]
+        },
+        {
+            "id": "6",
+            "name": "Dog",
+            "type": "Mammal",
+            "image": "",
+            "facts": ["Loyal companion", "Has a strong sense of smell", "Barks to communicate"]
+        },
+        {
+            "id": "7",
+            "name": "Eagle",
+            "type": "Bird",
+            "image": "",
+            "facts": ["Sharp vision", "Powerful flight", "Symbol of strength"]
+        },
+        {
+            "id": "8",
+            "name": "Monkey",
+            "type": "Mammal",
+            "image": "",
+            "facts": ["Very agile", "Loves bananas", "Uses tools"]
+        },
+        {
+            "id": "9",
+            "name": "Shark",
+            "type": "Marine",
+            "image": "",
+            "facts": ["Apex predator", "Senses blood from miles away", "Cartilaginous skeleton"]
+        },
+        {
+            "id": "10",
+            "name": "Zebra",
+            "type": "Mammal",
+            "image": "",
+            "facts": ["Has unique stripes", "Lives in herds", "Fast runner"]
+        }
+    ]
+}

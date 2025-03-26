@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Facts App 🐾</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Animal Facts App 🐾</h1>
+
+    <div class="app-container">
+        <div id="sidebar">
+            <input type="text" id="animalInput" placeholder="Search animals...">
+            
+            <div class="type-filter">
+                <button data-type="all" class="active">All</button>
+                <button data-type="mammals">Mammals</button>
+                <button data-type="birds">Birds</button>
+                <button data-type="marine">Marine</button>
+            </div>
+
+            <ul id="animalList"></ul>
+        </div>
+
+        <div id="mainContent">
+            <div id="factDisplay">
+                <h2 id="animalName">Select an Animal</h2>
+                <img id="animalImage" src="" alt="Animal Image">
+                <p id="animalFact">Click an animal to see its facts!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
