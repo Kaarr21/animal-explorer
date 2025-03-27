@@ -1,3 +1,4 @@
+// DOM Elements
 const animalInput = document.getElementById('animalInput');
 const animalList = document.getElementById('animalList');
 const factDisplay = document.getElementById('factDisplay');
@@ -14,10 +15,9 @@ const editType = document.getElementById('editType');
 const editId = document.getElementById('editId');
 
 let animalsData = [];
-
 async function fetchAnimals() {
     try {
-        const response = await fetch('https://my-app-backend-ziqa.onrender.com');
+        const response = await fetch('https://my-app-backend-ziqa.onrender.com/api/animals');
         const data = await response.json();
         animalsData = data;
         renderAnimalList(animalsData);
@@ -89,7 +89,7 @@ animalForm.addEventListener('submit', async (event) => {
     };
     
     try {
-        const response = await fetch('https://my-app-backend-ziqa.onrender.com', {
+        const response = await fetch('https://my-app-backend-ziqa.onrender.com/api/animals', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newAnimal)
@@ -126,7 +126,7 @@ editForm.addEventListener('submit', async (event) => {
     };
     
     try {
-        const response = await fetch(`https://my-app-backend-ziqa.onrender.com${editId.value}`, {
+        const response = await fetch(`https://my-app-backend-ziqa.onrender.com/api/animals/${editId.value}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedAnimal)
@@ -141,6 +141,4 @@ editForm.addEventListener('submit', async (event) => {
         console.error('Error updating animal:', error);
     }
 });
-
 fetchAnimals();
-
